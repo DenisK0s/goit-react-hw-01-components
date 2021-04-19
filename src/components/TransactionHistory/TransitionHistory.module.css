@@ -1,0 +1,9 @@
+.TransactionHistory {
+  width: 300px;
+}
+
+.TableHead {
+  padding: 15px;
+
+  background-color: darkmagenta;
+}

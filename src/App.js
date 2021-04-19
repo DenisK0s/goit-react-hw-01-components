@@ -1,18 +1,24 @@
-import Profile from './components/Profile';
-import user from './user.json';
+// модули
+
+// компоненты
+import Profile from './components/Profile/Profile';
+import FriendList from './components/FriendList/FriendList';
+import Statistics from './components/Statistics/Statistics';
+import TransitionHistory from './components/TransactionHistory/TransitionHistory';
+
+// данные
+import user from './store/user.json';
+import friends from './store/friends.json';
+import transactions from './store/transactions.json';
+import statisticalData from './store/statistical-data.json';
 
 
 const App = () => {
   return (<div>
-    < Profile
-      name={user.name}
-      tag={user.tag}
-      location={user.location}
-      avatar={user.avatar}
-      followers={user.stats.followers}
-      views={user.stats.views}
-      likes={user.stats.likes}
-    />
+    < Profile userProfile={user} />,
+    < FriendList friends={friends} />
+    < Statistics title="Upload stats" data={statisticalData} />
+    < TransitionHistory items={transactions} />
   </div>);
 }
 

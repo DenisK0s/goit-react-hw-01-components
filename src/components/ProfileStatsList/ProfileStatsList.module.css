@@ -1,0 +1,38 @@
+.StatsList {
+  display: inline-flex;
+  justify-content: space-between;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.StatsListItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  flex-basis: calc(100% / 3 - 10px);
+  flex-grow: 1;
+
+  padding: 10px;
+
+  background-color: lightgreen;
+
+  border-radius: 3px;
+}
+
+.StatsListItem:not(:last-child) {
+  margin-right: 5px;
+}
+
+.Label {
+  font-size: 12px;
+}
+
+.Quantity {
+  margin-top: 5px;
+
+  font-size: 14px;
+  font-weight: 700;
+}
