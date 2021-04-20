@@ -3,27 +3,33 @@ import PropTypes from 'prop-types';
 
 //компоненты
 import Container from '../Container/Container';
-import StatisticsListItem from '../StatisticsListItem/StatisticsListItem';
+import StatisticsListItem from '../Statistics/StatisticsListItem/StatisticsListItem';
 
 //Стили
 import styles from './Statistics.module.css';
 
 const Statistics = ({ title, data }) => {
-  const ulClasses = [styles.StatList, "List"].join(' ');
-  return <Container>
+  const ulClasses = [styles.StatList, 'List'].join(' ');
+  return (
+    <Container>
       <section className={styles.Statistics}>
-        <h2 className={styles.Title}>{ title }</h2>
+        <h2 className={styles.Title}>{title}</h2>
 
-        {title && (<ul className={ulClasses}>
-        {data.map(({ id, label, percentage }) => (<StatisticsListItem
-            id={id}
-            label={label}
-            percentage={percentage}
-          />))}
-        </ul>)}
+        {title && (
+          <ul className={ulClasses}>
+            {data.map(({ id, label, percentage }) => (
+              <StatisticsListItem
+                id={id}
+                label={label}
+                percentage={percentage}
+              />
+            ))}
+          </ul>
+        )}
       </section>
-  </Container> 
-}
+    </Container>
+  );
+};
 
 Statistics.defaultProps = {
   title: '',

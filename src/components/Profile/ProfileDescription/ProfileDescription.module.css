@@ -2,8 +2,7 @@
   overflow: hidden;
 
   width: 150px;
-
-  padding-top: 10px;
+  height: 150px;
 
   border-radius: 50%;
 
@@ -36,4 +35,8 @@
   font-size: 16px;
 
   color: #ffff;
+}
+
+.Avatar {
+  object-fit: cover;
 }
