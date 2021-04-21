@@ -12,14 +12,15 @@ import friends from './store/friends.json';
 import transactions from './store/transactions.json';
 import statisticalData from './store/statistical-data.json';
 
-
 const App = () => {
-  return (<div>
-    < Profile userProfile={user} />,
-    < FriendList friends={friends} />
-    < Statistics title="Upload stats" data={statisticalData} />
-    < TransitionHistory items={transactions} />
-  </div>);
-}
+  return (
+    <div>
+      <Profile userProfile={user} />,
+      <FriendList friends={friends} />
+      <Statistics title="Upload stats" data={statisticalData} />
+      <TransitionHistory items={transactions} />
+    </div>
+  );
+};
 
 export default App;

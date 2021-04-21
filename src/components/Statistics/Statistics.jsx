@@ -19,7 +19,7 @@ const Statistics = ({ title, data }) => {
           <ul className={ulClasses}>
             {data.map(({ id, label, percentage }) => (
               <StatisticsListItem
-                id={id}
+                key={id}
                 label={label}
                 percentage={percentage}
               />

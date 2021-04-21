@@ -7,11 +7,11 @@ import styles from './FriendListItem.module.css';
 //иконка
 import defaultIcon from '../../../images/icons/default-profile-picture1.jpg';
 
-const FriendListItem = ({ avatarUrl, name, status, id }) => {
+const FriendListItem = ({ avatarUrl, name, status }) => {
   const friendIsOnLine = [styles.Status, styles.OnLine].join(' ');
   const friendIsOffLine = [styles.Status, styles.OffLine].join(' ');
   return (
-    <li className={styles.Item} key={id}>
+    <li className={styles.Item}>
       {status ? (
         <span className={friendIsOnLine}></span>
       ) : (
@@ -31,9 +31,8 @@ FriendListItem.defaultProps = {
 
 FriendListItem.propTypes = {
   avatarUrl: PropTypes.string,
-  name: PropTypes.string.isRequired,
-  status: PropTypes.bool.isRequired,
-  id: PropTypes.number.isRequired,
+  name: PropTypes.string,
+  status: PropTypes.bool,
 };
 
 export default FriendListItem;

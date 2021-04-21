@@ -23,7 +23,7 @@ const TransitionHistory = ({ items }) => {
         <tbody>
           {items.map(({ id, type, amount, currency }) => (
             <TransactionTableRow
-              id={id}
+              key={id}
               type={type}
               amount={amount}
               currency={currency}

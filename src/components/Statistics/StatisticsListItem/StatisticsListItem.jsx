@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 // стили
 import styles from './StatisticsListItem.module.css';
 
-const StatisticsListItem = ({ id, label, percentage }) => {
+const StatisticsListItem = ({ label, percentage }) => {
   return (
-    <li className={styles.Item} key={id}>
+    <li className={styles.Item}>
       <span className={styles.Label}>{label}</span>
       <span className={styles.Percentage}>{percentage}%</span>
     </li>
@@ -14,7 +14,6 @@ const StatisticsListItem = ({ id, label, percentage }) => {
 };
 
 StatisticsListItem.propTypes = {
-  id: PropTypes.string.isRequired,
   label: PropTypes.string,
   percentage: PropTypes.number,
 };

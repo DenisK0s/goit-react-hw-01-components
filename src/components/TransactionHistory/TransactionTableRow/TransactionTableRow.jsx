@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 // стили
 import styles from './TransactionTableRow.module.css';
 
-const TransactionTableRow = ({ id, type, amount, currency }) => {
+const TransactionTableRow = ({ type, amount, currency }) => {
   return (
-    <tr key={id}>
+    <tr>
       <td className={styles.TransactionTableRow}>{type}</td>
       <td className={styles.TransactionTableRow}>{amount}</td>
       <td className={styles.TransactionTableRow}>{currency}</td>
@@ -15,7 +15,6 @@ const TransactionTableRow = ({ id, type, amount, currency }) => {
 };
 
 TransactionTableRow.propTypes = {
-  id: PropTypes.string.isRequired,
   type: PropTypes.string,
   amount: PropTypes.string,
   currency: PropTypes.string,
